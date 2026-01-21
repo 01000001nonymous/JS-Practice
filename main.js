@@ -1,10 +1,5 @@
-let textarea = document.getElementById("text"),
-  count = document.getElementById("count"),
-  maxLength = textarea.getAttribute("maxlength");
+const input = document.querySelector("input");
+let placeholder = input.getAttribute("placeholder");
 
-textarea.addEventListener("input", function () {
-  count.innerHTML = maxLength - this.value.length;
-  count.innerHTML == 0
-    ? count.classList.add("full")
-    : count.classList.remove("full");
-});
+input.onfocus = () => input.removeAttribute("placeholder", true);
+input.onblur = () => input.setAttribute("placeholder", placeholder);
