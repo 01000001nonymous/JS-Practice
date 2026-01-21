@@ -1,15 +1,20 @@
-document.body.classList.add(localStorage.getItem("pageColor") || "red");
+let capitalizeLetters = (string) => {
+  let words = string.split(" "),
+    newArray = [];
 
-let el = document.querySelectorAll(".color-switcher li");
-let classesList = [];
-
-el.forEach((el) => {
-  classesList.push(el.getAttribute("data-color"));
-  el.addEventListener("click", function () {
-    document.body.classList.remove(...classesList);
-    document.body.classList.add(this.getAttribute("data-color"));
-    localStorage.setItem("pageColor", this.getAttribute("data-color"));
+  words.forEach((word) => {
+    newArray.push(`${word.charAt(0).toUpperCase()}${word.slice(1)}`);
   });
-});
+  return newArray.join(" ");
+};
 
-localStorage.removeItem("pageColor");
+const form = document.querySelector("form");
+const input = document.querySelector("input");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const div = document.createElement("div");
+  div.innerText = capitalizeLetters(input.value);
+  document.body.appendChild(div);
+  input.value = "";
+});
