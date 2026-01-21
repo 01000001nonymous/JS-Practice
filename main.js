@@ -1,20 +1,10 @@
-let capitalizeLetters = (string) => {
-  let words = string.split(" "),
-    newArray = [];
+let textarea = document.getElementById("text"),
+  count = document.getElementById("count"),
+  maxLength = textarea.getAttribute("maxlength");
 
-  words.forEach((word) => {
-    newArray.push(`${word.charAt(0).toUpperCase()}${word.slice(1)}`);
-  });
-  return newArray.join(" ");
-};
-
-const form = document.querySelector("form");
-const input = document.querySelector("input");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const div = document.createElement("div");
-  div.innerText = capitalizeLetters(input.value);
-  document.body.appendChild(div);
-  input.value = "";
+textarea.addEventListener("input", function () {
+  count.innerHTML = maxLength - this.value.length;
+  count.innerHTML == 0
+    ? count.classList.add("full")
+    : count.classList.remove("full");
 });
