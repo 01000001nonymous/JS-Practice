@@ -1,11 +1,15 @@
-let text = "Hello, World!",
-  btn = document.getElementById("btn");
+let display = document.getElementById("display");
 
-btn.onclick = () => {
-  let i = 0;
-  let typeWriter = setInterval(() => {
-    document.getElementById("type").textContent += text[i];
-    i++;
-    if (i >= text.length) clearInterval(typeWriter);
-  }, 100);
-};
+function appendToDisplay(input) {
+  display.value += input;
+}
+function clearDisplay() {
+  display.value = "";
+}
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch (err) {
+    display.value = "Error";
+  }
+}
