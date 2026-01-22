@@ -1,12 +1,9 @@
-const classList = ["red", "blue", "green", "yellow", "orange", "purple"],
-  div = document.querySelector("div"),
-  btn = document.getElementById("btn"),
-  randomNumber = () => Math.floor(Math.random() * classList.length),
-  genrateNewClass = () => div.classList.add(classList[randomNumber()]);
+const textarea = document.getElementById("textarea"),
+  form = document.getElementById("form");
 
-genrateNewClass();
+const div = document.createElement("div");
+form.appendChild(div);
 
-btn.addEventListener("click", () => {
-  if (div.hasAttribute("class")) div.removeAttribute("class");
-  genrateNewClass();
+textarea.addEventListener("input", () => {
+  div.textContent = textarea.value;
 });
