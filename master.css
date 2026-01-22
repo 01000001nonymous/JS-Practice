@@ -12,8 +12,9 @@ body {
   height: 100vh;
   background-color: hsl(0, 0%, 95%);
 }
-div#clock {
-  font-size: 5rem;
-  color: hsl(0, 0%, 10%);
-  font-weight: bold;
+img {
+  width: 500px;
+  max-width: 100%;
+  margin: 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
