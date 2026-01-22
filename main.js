@@ -1,15 +1,12 @@
-let display = document.getElementById("display");
+let input = document.getElementById("password");
+let btn = document.getElementById("btn");
 
-function appendToDisplay(input) {
-  display.value += input;
-}
-function clearDisplay() {
-  display.value = "";
-}
-function calculate() {
-  try {
-    display.value = eval(display.value);
-  } catch (err) {
-    display.value = "Error";
+btn.addEventListener("click", () => {
+  if (input.type === "password") {
+    input.type = "text";
+    btn.textContent = "Hide Password";
+  } else {
+    input.type = "password";
+    btn.textContent = "Show Password";
   }
-}
+});
