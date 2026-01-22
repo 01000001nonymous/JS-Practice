@@ -1,12 +1,12 @@
-let input = document.getElementById("password");
-let btn = document.getElementById("btn");
+const classList = ["red", "blue", "green", "yellow", "orange", "purple"],
+  div = document.querySelector("div"),
+  btn = document.getElementById("btn"),
+  randomNumber = () => Math.floor(Math.random() * classList.length),
+  genrateNewClass = () => div.classList.add(classList[randomNumber()]);
+
+genrateNewClass();
 
 btn.addEventListener("click", () => {
-  if (input.type === "password") {
-    input.type = "text";
-    btn.textContent = "Hide Password";
-  } else {
-    input.type = "password";
-    btn.textContent = "Show Password";
-  }
+  if (div.hasAttribute("class")) div.removeAttribute("class");
+  genrateNewClass();
 });
