@@ -1,11 +1,11 @@
-const toggleBtn = document.querySelector(".sidebar-toggle"),
-  closeBtn = document.querySelector(".close-btn"),
-  sidebar = document.querySelector(".sidebar");
+const modal = document.querySelector(".modal-overlay"),
+  modalBtn = document.querySelector(".modal-btn"),
+  closeBtn = document.querySelector(".close-btn");
 
-toggleBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("show-sidebar");
+modalBtn.addEventListener("click", () => {
+  modal.classList.add("open-modal");
 });
 
 closeBtn.addEventListener("click", () => {
-  sidebar.classList.remove("show-sidebar");
+  modal.classList.remove("open-modal");
 });
