@@ -1,11 +1,9 @@
-const modal = document.querySelector(".modal-overlay"),
-  modalBtn = document.querySelector(".modal-btn"),
-  closeBtn = document.querySelector(".close-btn");
+const questions = document.querySelectorAll(".question");
 
-modalBtn.addEventListener("click", () => {
-  modal.classList.add("open-modal");
-});
-
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("open-modal");
+questions.forEach((question) => {
+  const btn = question.querySelector(".question-btn");
+  btn.addEventListener("click", () => {
+    questions.forEach((item) => item !== question && item.classList.remove("show-text"));
+    question.classList.toggle("show-text");
+  });
 });
