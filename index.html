@@ -9,20 +9,56 @@
     <link rel="stylesheet" href="./all.min.css" />
   </head>
   <body>
-    <div class="preload">
-      <img src="./imgs/0_PNoWKX4x7mP9SKVM.gif" alt="preload" />
-    </div>
-    <header>
-      <video muted autoplay loop class="video-container">
-        <source src="./imgs/ezgif-336cd99bea75a3.mp4" type="video/mp4" />
-      </video>
-      <h1>video project</h1>
-      <button class="switch-btn">
-        <span> play </span>
-        <span> pause </span>
-        <span class="switch"></span>
-      </button>
-    </header>
+    <section class="section">
+      <div class="title">
+        <h2>about</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+          aperiam!
+        </p>
+      </div>
+      <div class="about-center section-center">
+        <article class="about-img">
+          <img src="./imgs/about.jpg" alt="about" />
+        </article>
+        <article class="about">
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="history">history</button>
+            <button class="tab-btn" data-id="vision">vision</button>
+            <button class="tab-btn" data-id="goals">goals</button>
+          </div>
+          <div class="about-content">
+            <div class="content active" id="history">
+              <h4>history</h4>
+              <p>
+                history Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Perspiciatis, placeat quos necessitatibus eligendi est
+                aspernatur!
+              </p>
+            </div>
+            <div class="content" id="vision">
+              <h4>vision</h4>
+              <p>
+                vision Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Veniam quam, eaque magnam voluptas reiciendis molestiae.
+              </p>
+              <ul>
+                <li>li</li>
+                <li>li</li>
+                <li>li</li>
+              </ul>
+            </div>
+            <div class="content" id="goals">
+              <h4>goals</h4>
+              <p>
+                goals Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio, pariatur aspernatur. Ab sequi odit et.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
     <script src="main.js"></script>
     <script src="./all.min.js"></script>
   </body>
