@@ -9,55 +9,14 @@
     <link rel="stylesheet" href="./all.min.css" />
   </head>
   <body>
-    <section class="section">
-      <div class="title">
-        <h2>about</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-          aperiam!
-        </p>
-      </div>
-      <div class="about-center section-center">
-        <article class="about-img">
-          <img src="./imgs/about.jpg" alt="about" />
-        </article>
-        <article class="about">
-          <div class="btn-container">
-            <button class="tab-btn active" data-id="history">history</button>
-            <button class="tab-btn" data-id="vision">vision</button>
-            <button class="tab-btn" data-id="goals">goals</button>
-          </div>
-          <div class="about-content">
-            <div class="content active" id="history">
-              <h4>history</h4>
-              <p>
-                history Lorem ipsum, dolor sit amet consectetur adipisicing
-                elit. Perspiciatis, placeat quos necessitatibus eligendi est
-                aspernatur!
-              </p>
-            </div>
-            <div class="content" id="vision">
-              <h4>vision</h4>
-              <p>
-                vision Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Veniam quam, eaque magnam voluptas reiciendis molestiae.
-              </p>
-              <ul>
-                <li>li</li>
-                <li>li</li>
-                <li>li</li>
-              </ul>
-            </div>
-            <div class="content" id="goals">
-              <h4>goals</h4>
-              <p>
-                goals Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Distinctio, pariatur aspernatur. Ab sequi odit et.
-              </p>
-            </div>
-          </div>
-        </article>
-      </div>
+    <section class="section-center">
+      <h3>tired of boring lorem ipsum?</h3>
+      <form class="lorem-form">
+        <label for="amount">paragraphs:</label>
+        <input type="number" name="amount" id="amount" placeholder="5" />
+        <button type="submit" class="btn">generate</button>
+      </form>
+      <article class="lorem-text"></article>
     </section>
     <script src="main.js"></script>
     <script src="./all.min.js"></script>
