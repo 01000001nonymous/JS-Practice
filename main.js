@@ -1,15 +1,16 @@
-const btn = document.querySelector(".switch-btn"),
-  video = document.querySelector(".video-container"),
-  preload = document.querySelector(".preload");
+const btns = document.querySelectorAll(".tab-btn"),
+  about = document.querySelector(".about"),
+  articles = document.querySelectorAll(".content");
 
-btn.addEventListener("click", () => {
-  if (!btn.classList.contains("slide")) {
-    btn.classList.add("slide");
-    video.pause();
-  } else {
-    btn.classList.remove("slide");
-    video.play();
+about.addEventListener("click", (e) => {
+  const id = e.target.dataset.id;
+  if (id) {
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+      e.target.classList.add("active");
+    });
+
+    articles.forEach((article) => article.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
   }
 });
-
-window.addEventListener("load", () => preload.classList.add("hide-preload"));
