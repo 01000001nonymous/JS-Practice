@@ -9,15 +9,33 @@
     <link rel="stylesheet" href="./all.min.css" />
   </head>
   <body>
-    <section class="section-center">
-      <h3>tired of boring lorem ipsum?</h3>
-      <form class="lorem-form">
-        <label for="amount">paragraphs:</label>
-        <input type="number" name="amount" id="amount" placeholder="5" />
-        <button type="submit" class="btn">generate</button>
-      </form>
-      <article class="lorem-text"></article>
-    </section>
+    <div class="slider-container">
+      <div class="slide">
+        <img src="./imgs/1.jpg" class="slide-img" alt="" />
+        <h1>1</h1>
+      </div>
+      <div class="slide">
+        <h1>2</h1>
+      </div>
+      <div class="slide">
+        <h1>3</h1>
+      </div>
+      <div class="slide">
+        <div>
+          <img src="./imgs/anonymous.jpg" class="person-img" alt="" />
+          <h4>anonymous</h4>
+          <h1>4</h1>
+        </div>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button type="button" class="prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button type="button" class="next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
     <script src="main.js"></script>
     <script src="./all.min.js"></script>
   </body>
